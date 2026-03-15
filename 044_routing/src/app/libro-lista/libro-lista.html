@@ -2,6 +2,8 @@
 
 <ul>
     <li *ngFor="let libro of libros">
-        {{ libro.titulo }}
+        <a [routerLink]="['/libros', libro.id]">
+            {{ libro.titulo }}
+        </a>
     </li>
 </ul>

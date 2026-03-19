@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { LIBROS } from '../mocks';
 import { Libro } from '../libro.model';
 
 
 @Component({
   selector: 'app-libro-detalle',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './libro-detalle.html',
-  styleUrl: './libro-detalle.css',
+  styleUrls: ['./libro-detalle.css',]
 })
 export class LibroDetalle {
   libro!: Libro;

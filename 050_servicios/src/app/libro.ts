@@ -10,8 +10,14 @@ export class LibroService {
 
   constructor(private logger: Logger) {}
 
-  getLibros(): Libro[] {
-    this.logger.log("Llamada realizada sobre LibroService.getLibros");
-    return LIBROS;
+  getLibros(): Promise<Libro[]>{
+    return new Promise<Libro[]>((resolve, reject) =>{
+      this.logger.log("Inicio ejecutor (Promise de LibroService.getLibros())");
+
+      setTimeout(() => {
+        this.logger.log("Fin ejecutor (Promise de LibroService.getLibros())");
+        resolve(LIBROS);
+      }, 5000)
+    });
   }
 }

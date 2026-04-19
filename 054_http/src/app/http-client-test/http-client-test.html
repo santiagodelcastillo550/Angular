@@ -1,0 +1,12 @@
+<hr>
+<h5>Petición:</h5>
+<div class="btn-group" role="group" aria-label="Basic Example">
+    <button type="button" class="btn-secondary" (click)="get()">GET</button>
+    <button type="button" class="btn-secondary" (click)="post()">POST</button>
+    <button type="button" class="btn-secondary" (click)="put()">PUT</button>
+    <button type="button" class="btn-secondary" (click)="patch()">PATCH</button>
+    <button type="button" class="btn-secondary" (click)="delete()">DELETE</button>
+</div>
+<hr>
+<h5>Resultado:</h5>
+<pre>{{resultadoPeticion | json}}</pre>
